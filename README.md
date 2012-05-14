@@ -1,0 +1,4 @@
+CommitFormatter
+===============
+
+Intermedia Commit Formatter
