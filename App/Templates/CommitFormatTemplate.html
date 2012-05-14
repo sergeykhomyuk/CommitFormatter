@@ -1,0 +1,123 @@
+﻿<div class="well form-horizontal center" style="width: 700px;">
+    <fieldset>
+        <legend>
+            <img src="./img/logo.gif" />
+            <b>Intermedia</b> Commit Formats </legend>
+        <div class="control-group">
+            <label class="control-label" for="type">
+                Type</label>
+            <div class="controls">
+                <select id="type" data-bind="options: knownFormats, optionsText: 'displayName', value: format">
+                </select>
+            </div>
+        </div>
+        <!-- ko template: { name: template } -->
+        <!-- /ko -->
+        <hr />
+        <div class="controls">
+            <blockquote>
+                <h4>
+                    <span data-bind="text: commitText"></span>
+                    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="110" height="14">
+                        <param name="movie" value="./Flash/clippy.swf" />
+                        <param name="allowScriptAccess" value="always" />
+                        <param name="quality" value="high" />
+                        <param name="scale" value="noscale" />
+                        <param name="FlashVars" value="text=#{text}">
+                        <param name="bgcolor" value="#{bgcolor}">
+                        <embed data-clipper="true" src="./Flash/clippy.swf" width="110" height="14" name="clippy"
+                            quality="high" allowscriptaccess="always" type="application/x-shockwave-flash"
+                            pluginspage="http://www.macromedia.com/go/getflashplayer" bgcolor="#f5f5f5" />
+                    </object>
+                </h4>
+            </blockquote>
+        </div>
+    </fieldset>
+</div>
+
+
+<script id="bugFixCommitTemplate" type="text/html">
+    <div class="control-group">
+        <label class="control-label" for="bugNumber">Bug number</label>
+        <div class="controls">
+            <input id="bugNumber" type="text" placeholder="Number" data-bind="value : number, valueUpdate: 'afterkeydown'" />
+        </div>
+    </div>   
+    <div class="control-group">
+        <label class="control-label" for="bugDescription">Description</label>
+        <div class="controls">
+            <div class="input-append">
+                <input id="bugDescription" type="text" class="span4" placeholder="Description" data-bind="value : description, valueUpdate: 'afterkeydown'" />
+                <button class="btn" type="button" data-bind="click: generateDescription">I'm Feeling Lucky!</button>
+            </div>                    
+        </div>
+    </div>
+</script>
+<script id="taskCommitTemplate" type="text/html">
+    <div class="control-group">
+        <label class="control-label" for="taskNumber">Task number</label>
+        <div class="controls">
+            <input id="taskNumber" type="text" placeholder="Number" data-bind="value : number, valueUpdate: 'afterkeydown'" />
+        </div>
+    </div>   
+    <div class="control-group">
+        <label class="control-label" for="taskName">Name</label>
+        <div class="controls">
+            <input id="taskName" type="text" placeholder="Name" data-bind="value : name, valueUpdate: 'afterkeydown'" />
+        </div>
+    </div>            
+    <div class="control-group">
+        <label class="control-label" for="taskDescription">Description</label>
+        <div class="controls">
+            <div class="input-append">
+                <input id="taskDescription" type="text" class="span4" placeholder="Description" data-bind="value : description, valueUpdate: 'afterkeydown'" />
+                <button class="btn" type="button" data-bind="click: generateDescription">I'm Feeling Lucky!</button>
+            </div>                    
+        </div>
+    </div> 
+</script>
+<script id="caseCommitTemplate" type="text/html">
+    <div class="control-group">
+        <label class="control-label" for="caseNumber">Case number</label>
+        <div class="controls">
+            <input id="caseNumber" type="text" placeholder="Number" data-bind="value : number, valueUpdate: 'afterkeydown'" />
+        </div>
+    </div>   
+    <div class="control-group">
+        <label class="control-label" for="caseSubject">Subject</label>
+        <div class="controls">
+            <input id="caseSubject" type="text" placeholder="Subject" data-bind="value : name, valueUpdate: 'afterkeydown'" />
+        </div>
+    </div>            
+    <div class="control-group">
+        <label class="control-label" for="caseDescription">Description</label>
+        <div class="controls">
+            <div class="input-append">
+                <input id="caseDescription" type="text" class="span4" placeholder="Description" data-bind="value : description, valueUpdate: 'afterkeydown'" />
+                <button class="btn" type="button" data-bind="click: generateDescription">I'm Feeling Lucky!</button>
+            </div>
+        </div>
+    </div> 
+</script>
+<script id="devCommitTemplate" type="text/html">
+    <div class="control-group">
+        <label class="control-label" for="devDescription">Description</label>
+        <div class="controls">
+            <div class="input-append">
+                <input id="devDescription" type="text" class="span4" placeholder="Description" data-bind="value : description, valueUpdate: 'afterkeydown'" />
+                <button class="btn" type="button" data-bind="click: generateDescription">I'm Feeling Lucky!</button>
+            </div>
+        </div>
+    </div> 
+</script>
+<script id="qaCommitTemplate" type="text/html">
+    <div class="control-group">
+        <label class="control-label" for="qaDescription">Description</label>
+        <div class="controls">
+            <div class="input-append">
+                <input id="qaDescription" type="text" class="span4" placeholder="Description" data-bind="value : description, valueUpdate: 'afterkeydown'" />
+                <button class="btn" type="button" data-bind="click: generateDescription">I'm Feeling Lucky!</button>
+            </div>
+        </div>
+    </div> 
+</script>
