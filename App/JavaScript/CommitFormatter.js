@@ -45,6 +45,16 @@
         new CommitFormatType('QA', 'QA', 'qaCommitTemplate', function (data) {
             var description = data.description || '[Change description]';
             return 'QA: {0}'.format(description);
+        }),
+        new CommitFormatType('TPBugFix', 'Target Process - Bug Fix', 'bugFixCommitTemplate', function (data) {
+            var number = data.number || '[BugNumber]';
+            var description = data.description || '[Change description]';
+            return 'BugFix: #{0} comment: {1}'.format(number, description);
+        }),
+        new CommitFormatType('TPCommit', 'Target Process - Commit', 'bugFixCommitTemplate', function (data) {
+            var number = data.number || '[BugNumber]';
+            var description = data.description || '[Change description]';
+            return '#{0} comment: {1}'.format(number, description);
         })
     ];
 
